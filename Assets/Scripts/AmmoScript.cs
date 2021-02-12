@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
-using System.IO;
+using System.Numerics;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class AmmoScript : MonoBehaviour
 {
@@ -32,7 +30,7 @@ public class AmmoScript : MonoBehaviour
     }
     void MoveAmmo()
     {
-        rb.velocity = Vector3.zero;
+        rb.velocity = Vector2.zero;
         rb.AddForce(Direct * Speed);
     }
 

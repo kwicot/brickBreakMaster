@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using GoogleMobileAds.Api;
 using System;
 
 public class GameManager : MonoBehaviour
@@ -106,7 +105,6 @@ public class GameManager : MonoBehaviour
 
     public bool isDebug;
 
-    private RewardedAd rewardedAd;
 
 
 
@@ -170,6 +168,7 @@ public class GameManager : MonoBehaviour
         startPosNext.GetComponent<RectTransform>().sizeDelta = new Vector3(blockSizeX, blockSizeX, 0);
         EnteringGame();
 
+        /*
         string adUnitId = "ca-app-pub-3940256099942544/5224354917";
         this.rewardedAd = new RewardedAd(adUnitId);
 
@@ -190,6 +189,7 @@ public class GameManager : MonoBehaviour
         AdRequest request = new AdRequest.Builder().Build();
         // Load the rewarded ad with the request.
         this.rewardedAd.LoadAd(request);
+        */
 
 
     }
@@ -878,10 +878,12 @@ public class GameManager : MonoBehaviour
         ////add properties
         //LoadCheckPoint();
         //panelGameOver.SetActive(false);
+        /*
         if (this.rewardedAd.IsLoaded())
         {
             this.rewardedAd.Show();
         }
+        */
     }
     public void addRewardLoad()
     {
@@ -1174,6 +1176,8 @@ public class GameManager : MonoBehaviour
         lAmmo.Add(obj);
     }
 
+    
+    /*
     public void HandleRewardedAdLoaded(object sender, EventArgs args)
     {
         MonoBehaviour.print("HandleRewardedAdLoaded event received");
@@ -1209,4 +1213,5 @@ public class GameManager : MonoBehaviour
         NewGame(load._blockHealth, load._saveScore, load._maxAmmo, load._crystalsForGame);
         
     }
+    */
 }
